@@ -1,12 +1,9 @@
 import React from 'react'
 
-const TodoItem = () =>{
+const TodoItem = (props) =>{
     return(
-        <div>
-       <p> <input type="checkbox"/> List 1</p>
-       <p> <input type="checkbox"/> List 2 </p>
-       <p> <input type="checkbox"/> List 3 </p>
-       <p> <input type="checkbox"/> List 4 </p>
+        <div className="todo-list">
+       <p> <input type="checkbox" checked = {props.todo.completed} onChange = {() => props.handleChange(props.todo.id)}/> {props.todo.list}</p>
         </div>
     )
 }  
